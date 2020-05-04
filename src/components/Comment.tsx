@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getItemById } from '../services/hackernewsApi';
+import { StoryComments } from './styled/styledComponents';
 
 type Props = {
     commentId: number
@@ -12,16 +13,16 @@ export const Comment: React.FC<Props> = ({ commentId }) => {
         getItemById(commentId).then(data => setComment(data));
     }, []);
 
-    const commentText = {__html: comment.text};
+    const commentText = comment && {__html: comment.text};
     
 return comment && comment.by ? (
     <React.Fragment>
-        <div style={{borderBottom:'1px solid black', display:'block', padding:'0.5em', fontFamily:'Serif-sans'}} >
-            <div style={{fontSize:'1em', fontFamily:'Sans-serif', color:''}} dangerouslySetInnerHTML = {commentText}> 
-            
+        {/* <div style={{borderBottom:'1px solid black', display:'block', padding:'0.5em', fontFamily:'Serif-sans'}} > */}
+        <StoryComments>
+            <div dangerouslySetInnerHTML = {commentText}> 
             </div>
-            <div style={{fontStyle:'italics', paddingTop:'0.2em'}}>by: {comment.by}</div>
-        </div>
+            <div style={{paddingTop:'0.2em', paddingBottom:'0.2em', borderBottom:'1px solid black', fontSize:'0.8em'}}>by: {comment.by}</div>
+        </StoryComments>
     </React.Fragment>) : 
     <div>Loading comment ...</div>;
 };

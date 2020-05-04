@@ -15,10 +15,6 @@ const useStyles = makeStyles((theme) => ({
       display: 'block',
       padding: '0.5em'
     },
-    heading: {
-      fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular
-    },
     body: {
       fontSize: theme.typography.pxToRem(15),
       fontWeight: theme.typography.fontWeightLight,
@@ -36,9 +32,7 @@ export const ExpansionPanelComponent: React.FC<Props> = ({body}) => {
             aria-controls="panel1a-content"
             id="panel1a-header"
             >
-            <Typography className={classes.heading}>
-               <CommentTitle>Top comments on this story <span style={{fontSize:'0.7em'}}>(Click to view) </span></CommentTitle>
-            </Typography>
+            <CommentTitle>Top comments on this story <span style={{fontSize:'0.7em'}}>(Click to view) </span></CommentTitle>
             </ExpansionPanelSummary>
             <div className={classes.body}>
                 {body}

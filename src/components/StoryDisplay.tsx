@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getTopStoriesIds } from '../services/hackernewsApi';
 import { Story } from './Story';
+import { StoryContainer, Title } from './styled/styledComponents';
 
 export const StoryDisplay = () => {
     const [storyIds, setStoryIds] = useState([]);
@@ -14,8 +15,12 @@ export const StoryDisplay = () => {
     
   return (
     <>
-        <div style={{fontFamily:'Sans-serif', textAlign:'center', fontSize:'1.8em', margin:'1em'}}>Hackernews Top Stories!!!</div>
-        <div style={{margin:'1.5em', fontFamily:'Sans-serif'}}>{stories}</div>
+        <Title>
+            <div style={{textAlign:'center', fontFamily: 'Arial'}}>Hackernews Top Stories!!!</div>
+        </Title>
+        <StoryContainer>
+          <div style={{fontFamily:'Arial'}}>{stories}</div>
+        </StoryContainer>
     </>
   )
 };
