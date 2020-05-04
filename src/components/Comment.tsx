@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getItemById } from '../services/hackernewsApi';
-import { StoryComments } from './styled/styledComponents';
+import { StoryComments } from '../styles/styledComponents';
 
 type Props = {
     commentId: number

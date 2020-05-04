@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getTopStoriesIds } from '../services/hackernewsApi';
 import { Story } from './Story';
-import { StoryContainer, Title } from './styled/styledComponents';
+import { StoryContainer, Title } from '../styles/styledComponents';
 
 export const StoryDisplay = () => {
     const [storyIds, setStoryIds] = useState([]);
