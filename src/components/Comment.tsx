@@ -17,7 +17,6 @@ export const Comment: React.FC<Props> = ({ commentId }) => {
     
 return comment && comment.by ? (
     <React.Fragment>
-        {/* <div style={{borderBottom:'1px solid black', display:'block', padding:'0.5em', fontFamily:'Serif-sans'}} > */}
         <StoryComments>
             <div dangerouslySetInnerHTML = {commentText}> 
             </div>
