@@ -16,7 +16,7 @@ export const Story: React.FC<Props> = ({ id }) => {
 
 return story && story.by ? (
     <>
-        <div style={{fontSize:'1.4em', color:'', marginTop:'1em', textDecoration:'none'}}> 
+        <div style={{fontSize:'1.3em', marginTop:'1em'}}> 
             <a href={story.url} style={{textDecoration:'none'}}> { story.title } </a>
         </div>
         {story.text && <div style={{fontSize:'1em', marginTop:'1em', padding:'0.5em'}}>{story.text}</div>}

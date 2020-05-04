@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
+import { CommentTitle } from './styled/styledComponents';
 
 type Props = {
     body:any
@@ -11,11 +12,17 @@ type Props = {
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
-      display: 'block'
+      display: 'block',
+      padding: '0.5em'
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightBold,
+      fontWeight: theme.typography.fontWeightRegular
+    },
+    body: {
+      fontSize: theme.typography.pxToRem(15),
+      fontWeight: theme.typography.fontWeightLight,
+      padding: theme.typography.pxToRem(10)
     }
   }));
 
@@ -30,10 +37,10 @@ export const ExpansionPanelComponent: React.FC<Props> = ({body}) => {
             id="panel1a-header"
             >
             <Typography className={classes.heading}>
-               Top comments on this story <span style={{fontSize:'0.7em'}}>(Click to view) </span>
+               <CommentTitle>Top comments on this story <span style={{fontSize:'0.7em'}}>(Click to view) </span></CommentTitle>
             </Typography>
             </ExpansionPanelSummary>
-            <div style={{padding:'1em'}}>
+            <div className={classes.body}>
                 {body}
             </div>
         </ExpansionPanel>
