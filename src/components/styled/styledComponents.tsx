@@ -31,6 +31,11 @@ export const Global = createGlobalStyle`
         font-size: ${px2vw(12)};
         margin: ${px2vw(10)};
       }
+
+      @media (min-width: 1440px) {
+        font-size: ${px2vw(14)};
+        margin: ${px2vw(10)};
+      }
     }
 `;
 
@@ -54,6 +59,11 @@ export const Title = styled.div`
 
     @media (min-width: 1024px) {
       font-size: ${px2vw(24)};
+    }
+
+    @media (min-width: 1440px) {
+      font-size: ${px2vw(26)};
+      margin: ${px2vw(10)};
     }
 `;
 
@@ -81,6 +91,12 @@ export const StoryContainer = styled.div`
     font-size: ${px2vw(12)};
     margin: ${px2vw(10)};
   }
+
+  @media (min-width: 1440px) {
+    font-size: ${px2vw(14)};
+    margin: ${px2vw(10)};
+  }
+  
 `;
 
 export const CommentTitle = styled.div`
@@ -101,6 +117,10 @@ export const CommentTitle = styled.div`
 
   @media (min-width: 1025px) {
     font-size: ${px2vw(10)};
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${px2vw(12)};
   }
 
 `;
@@ -127,6 +147,11 @@ export const StoryComments = styled.div`
 
   @media (min-width: 1025px) {
     font-size: ${px2vw(10)};
+    margin: ${px2vw(10)};
+  }
+
+  @media (min-width: 1440px) {
+    font-size: ${px2vw(12)};
     margin: ${px2vw(10)};
   }
 
